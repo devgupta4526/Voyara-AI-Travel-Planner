@@ -12,6 +12,8 @@ web-build/
 
 FirebaseConfig.js
 
+.env
+
 # macOS
 .DS_Store
 

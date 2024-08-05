@@ -1,17 +1,42 @@
-import { StyleSheet, Text, View } from "react-native";
-import React, { useState } from "react";
-import { Colors } from "react-native/Libraries/NewAppScreen";
-import {Ionicons} from '@expo/vector-icons'
+import { View, Text, ActivityIndicator, ScrollView } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Colors } from "./../../constants/Colors";
+import { Ionicons } from "@expo/vector-icons";
+import StartNewTripCard from "../../components/MyTrips/StartNewTripCard";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { auth, db } from "../../configs/FirebaseConfig";
+import UserTripList from "../../components/MyTrips/UserTripList";
+import { TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router";
 
-export default function mytrip() {
+export default function MyTrip() {
+  const [userTrip, setUserTrip] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const user = auth.currentUser;
+  const router=  useRouter()
+  const GetMyTrips = async () => {
+    setLoading(true);
+    setUserTrip([]);
+    const q = query(
+      collection(db, "UserTrips"),
+      where("userEmail", "==", user?.email)
+    );
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      setUserTrip((prevState) => [...prevState, doc.data()]);
+    });
+    setLoading(false);
+  };
+  useEffect(() => {
+    user && GetMyTrips();
+  }, [user]);
 
-  const [useTrips, setUseTrips] = useState();
   return (
-    <View
+    <ScrollView
       style={{
         padding: 25,
         paddingTop: 55,
-        backgroundColor: Colors.backgroundColor,
+        backgroundColor: Colors.white,
         height: "100%",
       }}
     >
@@ -19,26 +44,32 @@ export default function mytrip() {
         style={{
           display: "flex",
           flexDirection: "row",
-          alignContent: 'center',
-          justifyContent: 'space-between'
+          alignItems: "center",
+          justifyContent: "space-between",
         }}
       >
         <Text
           style={{
             fontFamily: "outfit-bold",
-            fontSize: 35,
+            fontSize: 30,
           }}
         >
-          mytrip
+          My Trip
         </Text>
-        <Ionicons name='add-circle' size = {24} color ="black"/>
+        <TouchableOpacity onPress={()=>router.push('/create-trip/search-place')}>
+          <Ionicons name="add-circle" size={50} color={"black"} />
+        </TouchableOpacity>
       </View>
 
-      {useTrips?.length == 0
-      
-      }
-    </View>
+      {loading && <ActivityIndicator size={"large"} color={Colors.primary} />}
+
+      {userTrip?.length == 0 ? (
+        <StartNewTripCard />
+      ) : (
+        <View style={{
+          marginBottom:55
+        }}><UserTripList userTrips={userTrip} /></View>
+      )}
+    </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({});

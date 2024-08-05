@@ -8,47 +8,47 @@ export default function Login() {
   return (
     <View>
       <Image
-        source={require("./../assets/images/3814.jpg")}
-        style={{
-          width: "100%",
-          height: 400,
+        style={{ width: "100%", height: "40%" }}
+        source={{
+          uri: "https://m.media-amazon.com/images/I/61KJJUHKwZL._AC_UF1000,1000_QL80_.jpg",
         }}
       />
       <View style={styles.container}>
         <Text
           style={{
-            fontSize: 28,
-            fontFamily: "outfit",
+            fontSize: 30,
             textAlign: "center",
+            fontFamily: "outfit-bold",
+            marginTop: 10,
           }}
         >
-          Voyara:Your Travel Buddy
+          Voyara
         </Text>
         <Text
           style={{
-            fontFamily: "outfit",
-            fontSize: 16,
+            fontSize: 17,
             textAlign: "center",
-            color: Colors.GREY,
-            marginTop: 15,
+            color: Colors.GRAY,
+            fontFamily: "outfit",
+            marginTop: 30,
           }}
         >
-          Discover your next adventure effortlessly. Personalized itineraries at
-          your fingertips. Travel smarter with AI-driven insights.
+          Discover your next adventure effortlessly, Personalized itrineraries
+          at your fingertips. Travel smarter with AI-driven insights
         </Text>
-        <TouchableOpacity style={styles.button}
-        onPress={()=>router.push('auth/sign-in')}
-        >
-          <Text
-            style={{
-              color: Colors.WHITE,
-              textAlign: "center",
-              fontFamily: "outfit",
-              fontSize: 17,
-            }}
-          >
-            Sign In With Google
-          </Text>
+        <TouchableOpacity onPress={() => router.push("auth/sign-in")}>
+          <View style={styles.button}>
+            <Text
+              style={{
+                color: Colors.white,
+                fontSize: 17,
+                fontFamily: "outfit",
+                textAlign: "center",
+              }}
+            >
+              Get Started
+            </Text>
+          </View>
         </TouchableOpacity>
       </View>
     </View>
@@ -57,16 +57,16 @@ export default function Login() {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: Colors.WHITE,
+    backgroundColor: Colors.white,
     marginTop: -20,
     height: "100%",
-    borderTopRightRadius: 30,
     borderTopLeftRadius: 30,
-    padding: 20,
+    borderTopRightRadius: 30,
+    padding: 25,
   },
   button: {
     padding: 15,
-    backgroundColor: Colors.PRIMARY,
+    backgroundColor: Colors.primary,
     borderRadius: 99,
     marginTop: "15%",
   },
