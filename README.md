@@ -34,8 +34,7 @@ Built using React Native, Firebase, and Google's Gemini AI, Voyara leverages cut
 
 | Generated Trip: Final Itinerary | Generated Trip:Final Itinerary  | Generated Trip: Final Itinerary
 |---	|---	|---
-| ![Generated Trip 3](https://github.com/user-attachments/assets/592a2619-4552-441a-8b0e-8785fccc02e5) | ![Generated Trip 1](https://github.com/user-attachments/assets/5d3e9f10-eb19-4877-8c03-569481a978b7)
-| ![Generated Trip 2](https://github.com/user-attachments/assets/24246120-403b-4ef4-a98c-9da6cd1ac784)
+| ![Generated Trip 3](https://github.com/user-attachments/assets/592a2619-4552-441a-8b0e-8785fccc02e5) | ![Generated Trip 1](https://github.com/user-attachments/assets/5d3e9f10-eb19-4877-8c03-569481a978b7) | ![Generated Trip 2](https://github.com/user-attachments/assets/24246120-403b-4ef4-a98c-9da6cd1ac784)
 
 
 <br />
