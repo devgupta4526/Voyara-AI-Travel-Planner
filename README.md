@@ -1,7 +1,5 @@
 
 
-![Voyara App Banner](https://link-to-your-image-here.com/banner)
-
 # 🧳 Voyara: Your AI Travel Planner
 
 Voyara is an innovative full-stack mobile application designed to simplify and enhance your travel planning experience. With Voyara, users can effortlessly plan trips by selecting destinations, travel dates, budgets, and companions, and let advanced AI generate detailed itineraries. The app offers seamless user authentication, real-time data management, and a beautiful, intuitive interface.
@@ -18,25 +16,27 @@ Built using React Native, Firebase, and Google's Gemini AI, Voyara leverages cut
 
 ### 🌞 Day Mode
 
-|   Home    | Trip Details    |   Recommendations   
+|   Landing Page    | Sign Up    | Sign In   
 |---	|---	|---
-|  ![Home](https://link-to-your-image-here.com/home)   |  ![Trip Details](https://link-to-your-image-here.com/trip-details)   |   ![Recommendations](https://link-to-your-image-here.com/recommendations)
+|  ![Landing Page](https://github.com/user-attachments/assets/ab4c4afb-6398-43ca-bfc4-6fc6df80962a)   |  ![Sign Up](https://github.com/user-attachments/assets/b25fca6a-61a2-4f46-9953-ab8b44ee2dc3)   |   ![Sign In](https://github.com/user-attachments/assets/3ec0b007-4927-4445-9a6b-850f9ef8e52e)
 
-|   Plan Trip  |   Select Destination    | Review Trip    |
+|   Profile  |   Home (No Trip)    | Home (With Trip)    |
 |---    |---	|---	|
-|  ![Plan Trip](https://link-to-your-image-here.com/plan-trip)   |  ![Select Destination](https://link-to-your-image-here.com/select-destination)  |  ![Review Trip](https://link-to-your-image-here.com/review-trip)
+|  ![Profile](https://github.com/user-attachments/assets/5c788121-0ca0-443d-9605-db398e4373e3)   |  ![Home No Trip](https://github.com/user-attachments/assets/47bcfd87-002c-48da-b85b-2a6c497d7e6e)  |  ![Home With Trip](https://github.com/user-attachments/assets/4ed9ab50-2afe-47e0-a649-ffb6d5d65231)
 
-<br />
+|   Discover  |   Plan Trip: Location Selection    | Plan Trip: Date Selection    |
+|---	|---	|---
+|  ![Discover](https://github.com/user-attachments/assets/afe0c156-3806-497e-8b38-ae9766043fbc)   |  ![Generated Trip 1 Location](https://github.com/user-attachments/assets/0d67ea61-c9f0-4a54-826b-ff782612fd58)   |  ![Generated Trip 2 Dates](https://github.com/user-attachments/assets/51589c87-b726-42b1-ac19-6c65062760e9)
 
-### 🌚 We Support Dark Mode Too
+| Plan Trip: People Selection | Generated Trip: Waiting    | Generated Trip: Review
+|---	|---	|---
+| ![Generated Trip 3 People](https://github.com/user-attachments/assets/af7ce506-27a6-4316-b4aa-184bc05f3e68) | ![Generated Trip 5 Waiting](https://github.com/user-attachments/assets/82940ac5-d353-4c02-8a1b-c6ba7632e345) | ![Generated Trip 4 Review](https://github.com/user-attachments/assets/84ab7272-2ac3-4731-86e7-a322a01730e2)
 
-|   Home    | Trip Details   |   Recommendations      
-|---	|---	|---		
-| ![Home Dark](https://link-to-your-image-here.com/home-dark) |  ![Trip Details Dark](https://link-to-your-image-here.com/trip-details-dark)   |   ![Recommendations Dark](https://link-to-your-image-here.com/recommendations-dark)   
+| Generated Trip: Final Itinerary | Generated Trip:Final Itinerary  | Generated Trip: Final Itinerary
+|---	|---
+| ![Generated Trip 3](https://github.com/user-attachments/assets/592a2619-4552-441a-8b0e-8785fccc02e5) | ![Generated Trip 1](https://github.com/user-attachments/assets/5d3e9f10-eb19-4877-8c03-569481a978b7)
+| ![Generated Trip 2](https://github.com/user-attachments/assets/24246120-403b-4ef4-a98c-9da6cd1ac784)
 
-|   Plan Trip  |  Select Destination   | Review Trip   |
-|---    |---	|---	|
-|   ![Plan Trip Dark](https://link-to-your-image-here.com/plan-trip-dark)  |  ![Select Destination Dark](https://link-to-your-image-here.com/select-destination-dark)    |  ![Review Trip Dark](https://link-to-your-image-here.com/review-trip-dark) 
 
 <br />
 
@@ -45,9 +45,14 @@ Built using React Native, Firebase, and Google's Gemini AI, Voyara leverages cut
 Here's the list of the technologies included:
 
 - [React Native](https://reactnative.dev/) - A framework for building native apps using React.
+- [Expo](https://expo.dev/) - A development platform for building universal React apps.
+- [Expo Router](https://expo.dev/router) - A file-based routing system for Expo and React Native.
 - [Firebase](https://firebase.google.com/) - A Backend-as-a-Service for authentication, real-time database, and cloud storage.
 - [Gemini AI](https://ai.google.com/) - Google's advanced AI model used for generating personalized travel recommendations.
 - [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) - For offline data persistence.
+- **JavaScript** - Programming language for building the app logic and user interface.
+
+<br />
 
 ## 🗼 Architecture
 
@@ -130,3 +135,4 @@ If you enjoy using Voyara and want to support its development, consider [buying 
     See the License for the specific language governing permissions and
     limitations under the License.
 ```
+
